@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+
+    <body>
+        <%- include('partials/_header.ejs') %>
+            <main class="container">
+                <h1>Dashboard</h1>
+                <form id="taskForm">
+                    <div class="mb-3">
+                        <label for="taskName" class="form-label">Task Name</label>
+                        <input type="text" class="form-control" id="taskName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskDescription" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="taskDescription" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="taskDueDate" class="form-label">Due Date</label>
+                        <input type="date" class="form-control" id="taskDueDate">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Task</button>
+                </form>
+                <ul id="tasksList" class="list-unstyled mt-5">
+                    <!-- Tasks will be rendered here -->
+                </ul>
+            </main>
+            <script src="/js/dashboard.js"></script>
+    </body>
+    <%- include('partials/_footer.ejs') %>
+
+</html>
